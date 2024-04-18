@@ -1,0 +1,24 @@
+<div class="container">
+    <h2>Hello MDE</h2>
+    <div>
+        Enter text below :
+    </div>
+    <div></div>   
+    <div>
+        <input type="text" placeholder="Start Typing..." [formControl]="searchControl">
+        <ul *ngIf="filteredOptions | async as filtered">
+            <li *ngFor="let option of filtered">{{ option }}</li>
+        </ul>
+    </div>
+    <div></div>
+    <div></div>
+<div>
+    <div>
+        <br>
+        <br>
+    </div>
+    <button (click)="openModal()"> Optional Button </button>
+</div>
+  
+</div>
+<bot-modal [selectedItem]="selectedVal" *ngIf="modalService.modalOpen$ | async"></bot-modal>

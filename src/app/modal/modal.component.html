@@ -1,0 +1,18 @@
+<!-- modal.component.html -->
+<div class="modal-overlay">
+    <div class="modal-content" (click)="preventClosing($event)">
+      <div class="modal-header">
+        <h3>Modal Header</h3>
+        <button class="close-btn" (click)="closeModal()">X</button>
+      </div>
+      <div class="modal-body">
+        <!-- Modal content goes here -->
+        <p>This is the modal body content.</p>
+        <input type="text" [value]="selectedItem">
+      </div>
+      <div class="modal-footer">
+        <button (click)="closeModal()">Close</button>
+      </div>
+    </div>
+  </div>
+  
